@@ -14,7 +14,7 @@
 mvn clean compile spring-boot:run -f
 ```
 
-## Batch JOB
+## Batch JOB (Disable as of now)
 - Run every 3am to scrape all the link from website and save into table `scrap_website_source`
 - After the scrape done, the data will be insert into table `scrap_website_soal_jawab`
 
@@ -28,6 +28,14 @@ curl --location 'http://localhost:8080/soaljawab/configuration/scrap' \
 "method": "CREATE",
 "url": "https://zulkiflialbakri.com/category/soal-jawab-agama/page/2/"
 }'
+
+Below is the method available to be run in the API:
+a. LIST - list out all the website to scrape
+b. CREATE - create new scrape website
+c. CREATE-REPEAT - create new scrape website and repeat the page number
+d. UPDATE - update website scrape link
+d. DELETE - delete website scrape link
+
 ```
 
 ### 2. Search 
